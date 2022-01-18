@@ -24,4 +24,11 @@ TEST
 Tests may be executed with `sbt test`
 They may be viewed in src/test/scala/MainTest.scala
 
+CAVEATS
+-------------
+Preferably I would refactor this to not persist state to the main object and create a prettier layout for the results.
+Additionally support for different output formats (csv, json) would be nice.
+Support for processing infinite streams and storing results in some other persistence layer would be the next logical
+    steps for this application.
+
 
