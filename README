@@ -1,0 +1,27 @@
+Triple Counter
+------------
+Provide a list of files to count the recurring triples
+in each file: `scala triplecounter.jar <file1> ... <fileN>`
+The counter also accepts streamed input from STDIN : `cat <file> | scala triplecounter.jar`
+
+
+SETUP
+-------------
+This project runs on Scala 2.13.8
+To install and run, get Homebrew (https://docs.brew.sh/Installation)
+Once installed, run `brew install scala` (at time of writing the latest Scala version 2.13.8 will be installed
+SBT 1.3.13 is also required, run `brew install sbt`
+
+After both sbt and Scala are installed, execute `sbt compile package` to generate the triplecounter.jar binary.
+
+EXECUTION
+-------------
+Run `scala triplecounter.jar -h` to view the above help documentation
+
+
+TEST
+-------------
+Tests may be executed with `sbt test`
+They may be viewed in src/test/scala/MainTest.scala
+
+
