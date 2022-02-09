@@ -12,3 +12,8 @@ mainClass in (Compile, packageBin) := Some("triplecounter.TripleCounter")*/
 
 artifactPath in packageBin in Compile := baseDirectory.value / "triplecounter.jar"
 
+mainClass in (assembly) := Some("Main")
+assemblyJarName in assembly := "triplecounter.jar"
+
+assemblyOutputPath in assembly := baseDirectory.value / "triplecounter.jar"
+

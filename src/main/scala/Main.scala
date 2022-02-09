@@ -46,16 +46,18 @@ object Main extends App {
 
   def getWordsFromLine(line: String): Seq[String] =
     line
+      // Normalize to lowercase
+      .toLowerCase
       // Normalize contractions
       .replaceAll("'", "")
       // Replace unicode symbols with a space
       .replaceAll("[^\\u0000-\\u007F]", " ")
+      // Replace brackets with spaces
+      .replaceAll("[a-z0-9-]", " ")
       // Remove any spaces as a result of leading unicode char
       .trim
       // split on punctuation and whitespace
-      .split("[ .,?!\\\";:-]+")
-      // Normalize to lowercase
-      .map(_.toLowerCase)
+      .split("[ .,?!\\\";:]+")
 
   def updateTriples(cMap: mutable.Map[String, Int], triple: Seq[String]): Unit = {
     cMap.updateWith(triple.sorted.mkString(", ")) {
