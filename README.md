@@ -14,6 +14,7 @@ SBT 1.3.13 is also required, run `brew install sbt`
 
 After both sbt and Scala are installed, execute `sbt compile package` to generate the triplecounter.jar binary.
 
+####Packaged JAR
 Alternatively, a jar with full Scala dependencies may be generated with `sbt assembly`
 
 EXECUTION
@@ -21,7 +22,7 @@ EXECUTION
 Run `scala triplecounter.jar -h` to view the above help documentation.
 
 
-
+####Using sbt assembly packaged jar and Java -jar
 If you have chosen to compile a Java compatible jar, you may run `java -jar triplecounter.jar -h` to view output.
 
 `java -jar triplecounter.jar <file1>..<fileN>` may be used to execute with a filepath.
